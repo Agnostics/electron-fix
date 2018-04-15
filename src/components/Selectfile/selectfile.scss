@@ -1,0 +1,50 @@
+#dragarea {
+	height: calc(100vh - 80px);
+	padding: 50px 20px;
+	transition: opacity 1s ease-out;
+}
+
+.drag-area {
+	height: 100%;
+	border: 5px dashed #cfcfcf;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	font-size: 1.2em;
+}
+
+.drag-items {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #a5a5a5;
+
+	button {
+		background: #a5a5a5;
+		border: 0;
+		color: #eeeeee;
+		padding: 12px 40px;
+		margin-top: 12px;
+		cursor: pointer;
+		transition: all 0.5s ease;
+
+		letter-spacing: 1px;
+
+		&:hover {
+			background: #418fde;
+		}
+
+		&:active {
+			background: #2f679e;
+		}
+		&:focus {
+			outline: none;
+			border: none;
+		}
+	}
+}
+
+.fa-upload {
+	font-size: 2.8em;
+}
