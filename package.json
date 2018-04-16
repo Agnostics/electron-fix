@@ -1,7 +1,7 @@
 {
 	"name": "electron-fix",
 	"version": "0.0.1",
-	"description": "Quickly search and replace from text templates.",
+	"description": "Quickly search and replace HTML from text templates.",
 	"author": "Brandon Padilla",
 	"homepage": "https://github.com/agnostics/electron-fix",
 	"repository": {

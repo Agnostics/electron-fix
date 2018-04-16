@@ -16,11 +16,12 @@ if (
 
 function createWindow() {
 	mainWindow = new BrowserWindow({
-		width: 400,
-		height: 300,
+		width: 600,
+		height: 600,
 		frame: false,
-		resizable: false,
-		show: false
+		show: false,
+		minHeight: 192,
+		minWidth: 325
 	});
 
 	let indexPath;
