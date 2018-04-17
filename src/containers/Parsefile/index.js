@@ -21,7 +21,9 @@ class Parsefile extends Component {
 
 		const author = this.getAuthor(rawData);
 		const data = this.cleanUp(rawData);
+		console.log(data);
 		let fixes = this.getFixes(data);
+		console.log(fixes);
 
 		this.setState({ data, author, fixes, totalFixes: fixes.length });
 	}
@@ -34,14 +36,17 @@ class Parsefile extends Component {
 	}
 
 	cleanUp(rawData) {
-		const regexp = /INVAILD SEC CODING ([\s\S]*?)(?:--+)/g;
-		const data = rawData.replace(regexp, "");
+		const removeSEC = /INVAILD SEC CODING ([\s\S]*?)(?:--+)/g;
+		let data = rawData.replace(removeSEC, "");
+
+		const removeHeader = /Exp([\s\S]*?)Creat.*/i;
+		data = data.replace(removeHeader, "");
 
 		return data;
 	}
 
 	getFixes(data) {
-		const regexp = /(?:--+|)([\s\S]*?)Search.*([\s\S]*?)Replace.*([\s\S]*?)Occurrences:(.?[0-9]?[0-9]?[0-9])/g;
+		const regexp = /(?:--+|)([\s\S]*?)Search.*([\s\S]*?)Replace.*([\s\S]*?)Occurrence.*?\s+(.?[0-9]+|)/gi;
 
 		let searchResults = [];
 		var result;
@@ -74,15 +79,15 @@ class Parsefile extends Component {
 		return (
 			<div id="parsefile">
 				<ItemContainer allFixes={this.state.fixes} />
-				{/* {console.log(this.state.fixes)} */}
+
 				<div className="bottom-bar">
 					<div className="menu go-back" onClick={this.props.backBTN}>
 						GO BACK
 					</div>
 					<div className="menu small total-fixes">
-						<span>{this.state.totalFixes}</span>
+						Created by: {this.state.author}
 						<br />
-						total fixes
+						<span>Fixes: {this.state.totalFixes}</span>
 					</div>
 
 					<div className="menu run-fixes">RUN FIXES</div>
