@@ -2,6 +2,8 @@ import React from "react";
 import { remote } from "electron";
 import "./titlebar.scss";
 
+import backgfx from "./chevron-left.svg";
+
 const closeWindow = () => {
 	remote.BrowserWindow.getFocusedWindow().close();
 };
@@ -10,15 +12,24 @@ const minWindow = () => {
 	remote.BrowserWindow.getFocusedWindow().minimize();
 };
 
-const Titlebar = () => (
+const Titlebar = props => (
 	<div id="titlebar">
-		<div className="bar" />
+		{props.currentPath != "" ? (
+			<div className="go-back" onClick={props.backBTN}>
+				<i className="fas fa-angle-left" />
+				<span>back</span>
+			</div>
+		) : (
+			<div>null</div>
+		)}
+
 		<div className="min" onClick={minWindow}>
 			_
 		</div>
 		<div className="close" onClick={closeWindow}>
 			X
 		</div>
+		<div className="bar" />
 	</div>
 );
 

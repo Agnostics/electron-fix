@@ -18,6 +18,8 @@
 		"postpackage": "electron-packager ./ --out=./builds"
 	},
 	"devDependencies": {
+		"@fortawesome/fontawesome": "^1.1.5",
+		"@fortawesome/react-fontawesome": "0.0.18",
 		"babel-core": "^6.24.1",
 		"babel-loader": "^7.1.4",
 		"babel-preset-react": "^6.24.1",
@@ -27,13 +29,19 @@
 		"electron-packager": "^9.1.0",
 		"extract-text-webpack-plugin": "^3.0.2",
 		"file-loader": "^1.1.11",
+		"highlight.js": "^9.12.0",
 		"html-webpack-plugin": "^2.30.1",
 		"node-sass": "^4.8.3",
 		"react": "^16.3.1",
 		"react-dom": "^16.3.1",
 		"sass-loader": "^6.0.7",
 		"style-loader": "^0.19.1",
+		"svg-inline-loader": "^0.8.0",
 		"webpack": "^3.11.0",
 		"webpack-dev-server": "^2.11.2"
+	},
+	"dependencies": {
+		"font-awesome-webpack": "git+https://github.com/jarecsni/font-awesome-webpack.git#440af2a2efe7ba1779d039556f04538e57bad4bb",
+		"react-highlight.js": "^1.0.7"
 	}
 }

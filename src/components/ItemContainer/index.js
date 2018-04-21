@@ -5,8 +5,8 @@ import Item from "../Item";
 
 const ItemContainer = props => (
 	<div id="item">
-		{props.allFixes.map(item => {
-			return <Item info={item.info} search={item.search} replace={item.replace} occurrences={item.occurrences} />;
+		{props.allFixes.map((item, index) => {
+			return <Item key={index} info={item.info} search={item.search} replace={item.replace} occurrences={item.occurrences} />;
 		})}
 	</div>
 );

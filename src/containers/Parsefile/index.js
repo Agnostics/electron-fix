@@ -21,9 +21,8 @@ class Parsefile extends Component {
 
 		const author = this.getAuthor(rawData);
 		const data = this.cleanUp(rawData);
-		console.log(data);
+
 		let fixes = this.getFixes(data);
-		console.log(fixes);
 
 		this.setState({ data, author, fixes, totalFixes: fixes.length });
 	}
@@ -78,20 +77,17 @@ class Parsefile extends Component {
 	render() {
 		return (
 			<div id="parsefile">
-				<ItemContainer allFixes={this.state.fixes} />
-
-				<div className="bottom-bar">
-					<div className="menu go-back" onClick={this.props.backBTN}>
-						GO BACK
-					</div>
+				<div className="top-bar">
 					<div className="menu small total-fixes">
 						Created by: {this.state.author}
 						<br />
 						<span>Fixes: {this.state.totalFixes}</span>
 					</div>
 
-					<div className="menu run-fixes">RUN FIXES</div>
+					<div className="run-fixes">RUN {this.state.totalFixes} FIXES</div>
 				</div>
+
+				<ItemContainer allFixes={this.state.fixes} />
 			</div>
 		);
 	}

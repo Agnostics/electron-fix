@@ -1,33 +1,33 @@
 #titlebar {
 	width: 100%;
-	height: 25px;
+	height: 30px;
 	background-color: #363636;
 	position: fixed;
 	top: 0;
+	user-select: none;
 
 	.bar {
-		width: 86%;
-		height: 25px;
-		background-color: #363636;
+		width: 77%;
+		height: 30px;
 		position: fixed;
 		top: 0;
+		left: 85px;
 		-webkit-app-region: drag;
-		color: #eeeeee;
+		color: #ffffff;
 	}
 
 	.close {
 		position: fixed;
 		top: 0;
 		right: 0;
-		height: 22px;
+		height: 25px;
 		width: 25px;
-		color: #eeeeee;
+		color: #ffffff;
 		font-size: 13px;
 		text-align: center;
 		cursor: pointer;
 		vertical-align: middle;
 		padding-top: 5px;
-		margin-top: -2px;
 		&:hover {
 			background-color: #5f5f5f;
 		}
@@ -37,18 +37,45 @@
 		position: fixed;
 		top: 0px;
 		right: 25px;
-		height: 25px;
+		height: 28px;
 		width: 25px;
 		color: white;
 		font-size: 18px;
 		text-align: center;
 		cursor: pointer;
 		padding-bottom: -30px;
-		margin-top: -5px;
+		margin-top: -3px;
 		padding-bottom: 5px;
 
 		&:hover {
 			background-color: #5f5f5f;
 		}
+	}
+}
+
+.go-back {
+	color: white;
+	font-size: 16px;
+	height: 30px;
+	width: 75px;
+	color: white;
+	cursor: pointer;
+	font-size: 21px;
+	display: inline-block;
+
+	span {
+		display: inline;
+		font-size: 12px;
+		margin-left: 10px;
+		position: absolute;
+		margin-top: 7px;
+	}
+	&:hover {
+		background-color: #5f5f5f;
+	}
+
+	i {
+		margin-left: 10px;
+		margin-top: 4px;
 	}
 }
