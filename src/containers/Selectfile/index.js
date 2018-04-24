@@ -7,25 +7,30 @@ const outputTest = () => {
 };
 
 class Selectfile extends Component {
+	constructor(props) {
+		super(props);
+		this.preventDefault = this.preventDefault.bind(this);
+		this.drop = this.drop.bind(this);
+	}
+
 	componentDidMount() {
 		ipc.on("selected-file", (event, path) => {
 			this.props.updatePath(path[0]);
 		});
 	}
 
+	preventDefault(e) {
+		e.preventDefault();
+	}
+
+	drop(e) {
+		this.props.updatePath(e.dataTransfer.files[0].path);
+		e.preventDefault();
+	}
+
 	render() {
-		document.body.ondrop = ev => {
-			this.props.updatePath(ev.dataTransfer.files[0].path);
-			// ipc.send("open-file-dialog");
-			ev.preventDefault();
-		};
-
-		document.ondragover = document.ondrop = ev => {
-			ev.preventDefault();
-		};
-
 		return (
-			<div id="dragarea">
+			<div id="dragarea" onDragOver={this.preventDefault} onDrop={this.drop}>
 				<div className="drag-area">
 					<div className="drag-items">
 						<i className="fas fa-upload" />

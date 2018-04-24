@@ -77,3 +77,28 @@ ipcMain.on("open-file-dialog", function(event) {
 		}
 	);
 });
+
+ipcMain.on("open-html-dialog", function(event) {
+	dialog.showMessageBox(
+		mainWindow,
+		{
+			buttons: ["Find HTML File", "Start Over"],
+			type: "warning",
+			message:
+				"The html file was not found. Make sure fixes are in the same directory as the html file otherwise you will have to manually search for it below.",
+			title: "HTML NOT FOUND"
+		},
+		res => {
+			if (res == 0) {
+				dialog.showOpenDialog(
+					{ properties: ["openFile"], filters: [{ name: "Htlm File", extensions: ["htm", "html"] }] },
+					openPath => {
+						if (openPath) event.sender.send("html-file", openPath);
+					}
+				);
+			} else {
+				event.sender.send("go-back");
+			}
+		}
+	);
+});
