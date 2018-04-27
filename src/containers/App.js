@@ -81,7 +81,11 @@ class App extends Component {
 		return (
 			<div>
 				<Titlebar currentPath={this.state.filepath} backBTN={this.goBackButton} jobNumber={this.state.jobNumber} />
-				{this.state.showOutput ? <Outputfile fixes={this.state.fixes} /> : isSelected}
+				{this.state.showOutput ? (
+					<Outputfile fixes={this.state.fixes} jobNumber={this.state.jobNumber} htmlpath={this.state.htmlpath} />
+				) : (
+					isSelected
+				)}
 			</div>
 		);
 	}
