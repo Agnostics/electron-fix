@@ -7,7 +7,6 @@ import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 
 import Titlebar from "../components/Titlebar";
 import Selectfile from "./Selectfile";
-import Parsefile from "./Parsefile";
 import Outputfile from "./Outputfile";
 
 const fs = require("fs");
@@ -55,10 +54,10 @@ class App extends Component {
 
 		fs.readdirSync(directory).forEach(file => {
 			let ext = file.split(".");
-			let jobNumber = ext[0].split("_")[0];
 
 			if (ext[1] == "htm") {
 				if (!regexp.test(file)) {
+					let jobNumber = ext[0];
 					htmlFile = directory + "\\" + file;
 					this.setState({ htmlpath: directory + "\\" + file, jobNumber });
 				}
@@ -72,20 +71,16 @@ class App extends Component {
 
 	render() {
 		const isSelected =
-			this.state.filepath === "" ? (
+			this.state.htmlpath === "" ? (
 				<Selectfile updatePath={this.updateFilepath} currentPath={this.state.filepath} />
 			) : (
-				<Parsefile currentPath={this.state.filepath} showOutput={this.showOutput} />
+				<Outputfile jobNumber={this.state.jobNumber} htmlpath={this.state.htmlpath} currentPath={this.state.filepath} />
 			);
 
 		return (
 			<div>
 				<Titlebar currentPath={this.state.filepath} backBTN={this.goBackButton} jobNumber={this.state.jobNumber} />
-				{this.state.showOutput ? (
-					<Outputfile fixes={this.state.fixes} jobNumber={this.state.jobNumber} htmlpath={this.state.htmlpath} />
-				) : (
-					isSelected
-				)}
+				{isSelected}
 			</div>
 		);
 	}

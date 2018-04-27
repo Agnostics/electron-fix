@@ -23,8 +23,6 @@ const Titlebar = props => (
 			<div>null</div>
 		)}
 
-		{props.currentPath != "" ? <div className="job-number">{props.jobNumber}</div> : null}
-
 		<div className="min" onClick={minWindow}>
 			_
 		</div>
