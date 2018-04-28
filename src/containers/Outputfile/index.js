@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./outputfile.scss";
 import ItemContainer from "../../components/ItemContainer";
 
+import Donut from "react-animated-donut";
+
 const fs = require("fs");
 
 class Outputfile extends Component {
@@ -16,8 +18,13 @@ class Outputfile extends Component {
 			fixes: [],
 			totalFixes: "",
 			exportType: "clean",
-			tocType: "yes"
+			tocType: "yes",
+			showChanged: true,
+			isSaved: false
 		};
+
+		this.changeShowChange = this.changeShowChange.bind(this);
+		this.saveHTML = this.saveHTML.bind(this);
 	}
 
 	componentDidMount() {
@@ -123,6 +130,10 @@ class Outputfile extends Component {
 		let changed = [];
 		let matched = [];
 
+		let matchCount = 0;
+		let moreCount = 0;
+		let lessCount = 0;
+
 		fixes.forEach(element => {
 			const search = new RegExp(element.search, "gi");
 			const replace = element.replace;
@@ -133,13 +144,32 @@ class Outputfile extends Component {
 				activeCount++;
 			}
 
+			let diffOcc = activeCount - element.occurrences;
+
+			let color = "";
+
+			if (diffOcc > 0) {
+				diffOcc = "+" + diffOcc;
+				color = "fix-count add";
+			} else if (diffOcc < 0) {
+				color = "fix-count less";
+			} else {
+				color = "fix-count match";
+			}
+
 			var newObj = {
 				info: element.info || "Description not provided",
 				search: element.search,
 				replace: element.replace,
 				occurrences: element.occurrences,
-				count: activeCount
+				count: activeCount,
+				diff: diffOcc,
+				fixcolor: color
 			};
+
+			if (activeCount > element.occurrences) moreCount++;
+			if (activeCount < element.occurrences) lessCount++;
+			if (activeCount == element.occurrences) matchCount++;
 
 			if (activeCount != element.occurrences) {
 				changed.push(newObj);
@@ -152,21 +182,68 @@ class Outputfile extends Component {
 			text = text.replace(search, replace);
 		});
 
-		this.setState({ rawHtml: text, changed, matched, all });
+		this.setState({ rawHtml: text, changed, matched, all, matchCount, lessCount, moreCount });
+	}
+
+	changeShowChange() {
+		this.setState({ showChanged: !this.state.showChanged });
+	}
+
+	saveHTML(e) {
+		let path = this.props.htmlpath;
+
+		fs.writeFile(path, this.state.rawHtml, function(err) {
+			if (err) throw err;
+		});
+
+		this.setState({ isSaved: true });
 	}
 
 	render() {
+		let isUpdated = "";
+		if (this.state.changed.length == 0) {
+			this.state.showChanged = false;
+			isUpdated = "fix-matched";
+		}
+
 		return (
 			<div id="outputfile">
 				<div className="top-bar">
-					<div className="title">{this.props.jobNumber}</div>
-					<div className="sort">
-						Changed Occurrences <i className="fas fa-sort" />
+					<div className="donut">
+						<div className="fix-count-number">
+							<span style={{ fontSize: "12px", marginBottom: "-10px" }}>Total Fixes</span>
+							<br />
+							{this.state.totalFixes}
+						</div>
+
+						{this.state.all.length > 1 ? (
+							<Donut
+								data={[
+									{ value: this.state.matchCount, color: "#4190de" },
+									{ value: this.state.moreCount, color: "#21d79d" },
+									{ value: this.state.lessCount, color: "#c05353" }
+								]}
+								speed={5}
+								width={20}
+							/>
+						) : null}
+					</div>
+					<div className="title">
+						{this.props.jobNumber}
+						<div className="byline">created by: {this.state.author}</div>
+						<div className="btns">
+							<button className={isUpdated}>update fixes</button>{" "}
+							{this.state.isSaved ? null : <button onClick={this.saveHTML}>save html</button>}
+						</div>
+					</div>
+					{this.state.isSaved ? <div className="file-saved">HTML SAVED</div> : null}
+					<div className="sort" onClick={this.changeShowChange}>
+						{this.state.showChanged ? "Changed Occurrences" : "All Occurrences"} <i className="fas fa-sort" />
 					</div>
 					<div className="background-bar" />
 				</div>
 
-				<ItemContainer allFixes={this.state.changed} />
+				<ItemContainer allFixes={this.state.showChanged ? this.state.changed : this.state.all} />
 			</div>
 		);
 	}

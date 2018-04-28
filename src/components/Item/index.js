@@ -19,8 +19,8 @@ const handleChild = e => {
 const Item = props => (
 	<div id="fix" onClick={checkClick} style={{ maxHeight: "40px" }}>
 		<div className="info">{props.info || "Description not supplied"}</div>
-		<div className="fix-count" title="Total Occurrences">
-			{props.occurrences}
+		<div className={props.fixcolor} title={"Displayed: " + props.occurrences + " | Found: " + props.count}>
+			{props.occurrences != props.count ? props.diff : props.occurrences}
 		</div>
 		<div className="show-fix-contain" onClick={handleChild}>
 			<div>

@@ -21,14 +21,15 @@ function createWindow() {
 		frame: false,
 		show: false,
 		minHeight: 200,
-		minWidth: 350
+		minWidth: 350,
+		resizable: false
 	});
 
 	let indexPath;
 	if (dev && process.argv.indexOf("--noDevServer") === -1) {
 		indexPath = url.format({
 			protocol: "http:",
-			host: "localhost:4000",
+			host: "localhost:4001",
 			pathname: "index.html",
 			slashes: true
 		});

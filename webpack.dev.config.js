@@ -51,7 +51,8 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: helpers.root("public/index.html"),
-			inject: "body"
+			inject: "body",
+			title: "Electron Fixes"
 		}),
 		new webpack.DefinePlugin({
 			"process.env.NODE_ENV": JSON.stringify("development")

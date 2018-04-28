@@ -1,5 +1,6 @@
 {
 	"name": "electron-fix",
+	"productName": "Electron Fix",
 	"version": "0.0.1",
 	"description": "Quickly search and replace HTML from text templates.",
 	"author": "Brandon Padilla",
@@ -14,8 +15,21 @@
 		"prod": "webpack --config webpack.build.config.js && electron --noDevServer .",
 		"dev": "webpack-dev-server --hot --host 0.0.0.0 --port 4000 --config=./webpack.dev.config.js",
 		"build": "webpack --config webpack.build.config.js",
-		"package": "webpack --config webpack.build.config.js",
-		"postpackage": "electron-packager ./ --out=./builds"
+		"package": "webpack --config webpack.build.config.js ",
+		"postpackage": "electron-builder"
+	},
+
+	"build": {
+		"appId": "com.brandon.app",
+		"productName": "Electron Fixes",
+		"win": {
+			"target": ["nsis", "portable"]
+		},
+		"directories": {
+			"output": "builds"
+		},
+		"asar": false,
+		"files": ["package.json", "main.js", "dist/**/*"]
 	},
 	"devDependencies": {
 		"@fortawesome/fontawesome": "^1.1.5",
@@ -27,21 +41,23 @@
 		"css-loader": "^0.28.11",
 		"electron": "^1.8.4",
 		"electron-packager": "^9.1.0",
+		"electron-builder": "^20.10.0",
 		"extract-text-webpack-plugin": "^3.0.2",
 		"file-loader": "^1.1.11",
 		"highlight.js": "^9.12.0",
 		"html-webpack-plugin": "^2.30.1",
 		"node-sass": "^4.8.3",
 		"react": "^16.3.1",
+		"react-animated-donut": "^0.4.0",
 		"react-dom": "^16.3.1",
 		"sass-loader": "^6.0.7",
 		"style-loader": "^0.19.1",
 		"svg-inline-loader": "^0.8.0",
 		"webpack": "^3.11.0",
-		"webpack-dev-server": "^2.11.2"
-	},
-	"dependencies": {
-		"font-awesome-webpack": "git+https://github.com/jarecsni/font-awesome-webpack.git#440af2a2efe7ba1779d039556f04538e57bad4bb",
+		"webpack-dev-server": "^2.11.2",
+		"font-awesome-webpack":
+			"git+https://github.com/jarecsni/font-awesome-webpack.git#440af2a2efe7ba1779d039556f04538e57bad4bb",
 		"react-highlight.js": "^1.0.7"
-	}
+	},
+	"dependencies": {}
 }
