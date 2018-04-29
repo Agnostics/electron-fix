@@ -16,8 +16,20 @@ const handleChild = e => {
 	e.stopPropagation();
 };
 
+const itemColor = (occ, count) => {
+	let obj;
+
+	if (occ == 0 && count == 0) {
+		obj = { maxHeight: "40px", backgroundColor: "rgba(255, 255, 255, 0.3)" };
+	} else {
+		obj = { maxHeight: "40px" };
+	}
+
+	return obj;
+};
+
 const Item = props => (
-	<div id="fix" onClick={checkClick} style={{ maxHeight: "40px" }}>
+	<div id="fix" onClick={checkClick} style={itemColor(props.occurrences, props.count)}>
 		<div className="info">{props.info || "Description not supplied"}</div>
 		<div className={props.fixcolor} title={"Displayed: " + props.occurrences + " | Found: " + props.count}>
 			{props.occurrences != props.count ? props.diff : props.occurrences}

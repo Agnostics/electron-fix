@@ -74,7 +74,12 @@ class App extends Component {
 			this.state.htmlpath === "" ? (
 				<Selectfile updatePath={this.updateFilepath} currentPath={this.state.filepath} />
 			) : (
-				<Outputfile jobNumber={this.state.jobNumber} htmlpath={this.state.htmlpath} currentPath={this.state.filepath} />
+				<Outputfile
+					jobNumber={this.state.jobNumber}
+					htmlpath={this.state.htmlpath}
+					currentPath={this.state.filepath}
+					backBTN={this.goBackButton}
+				/>
 			);
 
 		return (

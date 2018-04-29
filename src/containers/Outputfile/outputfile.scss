@@ -87,6 +87,7 @@
 		outline: none;
 		border: none;
 		transition: all 0.2s ease-in-out;
+		margin-right: 20px;
 
 		&:hover {
 			cursor: pointer;
@@ -97,6 +98,7 @@
 	.fix-matched {
 		background-color: rgba(125, 37, 202, 0.2);
 		cursor: default;
+		margin-right: 20px;
 
 		&:hover {
 			background-color: rgba(125, 37, 202, 0.2);
@@ -125,9 +127,66 @@
 }
 
 .file-saved {
-	position: absolute;
-	left: 484px;
-	bottom: 78px;
 	color: #7e25ca;
-	font-size: 14px;
+	font-size: 13px;
+	text-align: center;
+	margin-right: 0px;
+	display: inline-block;
+	margin-right: 20px;
+	width: 100px;
+	height: 25px;
+	vertical-align: middle;
+}
+
+.file-updated {
+	color: #7e25ca;
+	font-size: 13px;
+	text-align: center;
+	margin-right: 0px;
+	display: inline-block;
+	margin-right: 20px;
+	width: 100px;
+	height: 25px;
+	vertical-align: middle;
+}
+
+.start-over {
+	margin-top: 155px;
+	text-align: center;
+	width: 80%;
+	background-color: #ffffff;
+	margin-left: 55px;
+	padding: 25px;
+	font-weight: bold;
+	border-radius: 5px;
+	letter-spacing: 2px;
+
+	button {
+		margin-top: 25px;
+		width: 140px;
+		height: 45px;
+		background-color: #c05353;
+		color: white;
+		border-radius: 5px;
+		outline: none;
+		border: none;
+		font-size: 14px;
+		letter-spacing: 2px;
+		font-weight: bold;
+		transition: all 0.2s ease-in-out;
+		margin-right: 20px;
+
+		&:hover {
+			cursor: pointer;
+			background-color: #c02727;
+		}
+	}
+
+	.over-btn {
+		background-color: #27c09a;
+		&:hover {
+			cursor: pointer;
+			background-color: #049c76;
+		}
+	}
 }
