@@ -212,7 +212,9 @@ class Outputfile extends Component {
 				errorText:
 					"It appears no matches were found. Maybe you have selected the wrong file, fixes were already completed or the important fixes were poorly made."
 			});
-		if (changed == 0) this.setState({ classUpdateBtn: "fix-matched" });
+
+		console.log(changed.length);
+		if (changed.length == 0) this.setState({ classUpdateBtn: "fix-matched" });
 
 		this.setState({ rawHtml: text, changed, matched, all, matchCount, lessCount, moreCount, none });
 	}

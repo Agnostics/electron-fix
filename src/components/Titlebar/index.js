@@ -2,8 +2,6 @@ import React from "react";
 import { remote } from "electron";
 import "./titlebar.scss";
 
-import backgfx from "./chevron-left.svg";
-
 const closeWindow = () => {
 	remote.BrowserWindow.getFocusedWindow().close();
 };

@@ -33,10 +33,10 @@ class Selectfile extends Component {
 			<div id="dragarea" onDragOver={this.preventDefault} onDrop={this.drop}>
 				<div className="drag-area">
 					<div className="drag-items">
-						<i className="fas fa-upload" />
-						<div>Drag Important Fixes Here</div>
+						<i className="far fa-file-alt" />
+						<div className="drag-title">Drop Fixes Here</div>
 						<small>- or -</small>
-						<button onClick={outputTest}>Browse File</button>
+						<button onClick={outputTest}>browse file</button>
 					</div>
 				</div>
 			</div>
