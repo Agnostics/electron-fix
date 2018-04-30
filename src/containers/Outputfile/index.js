@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./outputfile.scss";
 import ItemContainer from "../../components/ItemContainer";
-
 import Donut from "react-animated-donut";
-
-const fs = require("fs");
+import fs from "fs";
 
 class Outputfile extends Component {
 	constructor(props) {
@@ -213,7 +211,6 @@ class Outputfile extends Component {
 					"It appears no matches were found. Maybe you have selected the wrong file, fixes were already completed or the important fixes were poorly made."
 			});
 
-		console.log(changed.length);
 		if (changed.length == 0) this.setState({ classUpdateBtn: "fix-matched" });
 
 		this.setState({ rawHtml: text, changed, matched, all, matchCount, lessCount, moreCount, none });
@@ -236,29 +233,31 @@ class Outputfile extends Component {
 	updateFixFile() {
 		if (this.state.classUpdateBtn == "fix-matched") return;
 
-		this.setState({ txtFileUpdated: true });
-
 		let textFile = fs.readFileSync(this.props.currentPath, "utf8", function read(err, data) {
+			if (err) console.log(err);
 			return data;
 		});
 
 		let text = textFile;
 
 		this.state.changed.forEach(element => {
-			let regexString = `^(${element.search}(?:[\\s\\S]*?)replace.[\\s]?${
-				element.replace
-			}(?:[\\s\\S]*?)Occurrences.[\\s]?)(${element.occurrences})`;
+			let search = this.escapeRegExp(element.search);
+			let replace = this.escapeRegExp(element.replace);
+			let regexString = `(^${search}(?:[\\s\\S]*?)Occurrences.)(.*)`;
+			const regexp = new RegExp(regexString, "mgi");
 
-			const regexp = new RegExp(regexString, "mi");
-
-			text = text.replace(regexp, "$1" + element.count);
+			text = text.replace(regexp, "$1" + " " + element.count);
 		});
+
+		this.setState({ txtFileUpdated: true });
 
 		fs.writeFile(this.props.currentPath, text, function(err) {
 			if (err) throw err;
 		});
+	}
 
-		this.setState({ txtFileUpdated: true });
+	escapeRegExp(str) {
+		return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
 	}
 
 	toggleError() {
@@ -279,9 +278,9 @@ class Outputfile extends Component {
 						{this.state.all.length > 1 ? (
 							<Donut
 								data={[
-									{ value: this.state.matchCount, color: "#4190de" },
-									{ value: this.state.moreCount, color: "#21d79d" },
-									{ value: this.state.lessCount, color: "#c05353" },
+									{ value: this.state.matchCount, color: "#516395" },
+									{ value: this.state.moreCount, color: "#48b1bf" },
+									{ value: this.state.lessCount, color: "#bd3f32" },
 									{ value: this.state.none, color: "#7a7a7a" }
 								]}
 								speed={5}

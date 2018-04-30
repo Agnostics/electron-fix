@@ -1,3 +1,6 @@
+$blue: #516395;
+$purple: #614385;
+
 #outputfile {
 	color: black;
 	margin-top: 220px;
@@ -35,7 +38,7 @@
 .background-bar {
 	width: 100%;
 	position: absolute;
-	background-color: #f2f1f1;
+	background: linear-gradient(to right, #ffffff, #f2f1f1);
 	height: 60%;
 	margin-top: 50px;
 	z-index: -100;
@@ -44,7 +47,7 @@
 .sort {
 	font-size: 12px;
 	margin-left: 3%;
-	color: black;
+	color: #4a4a4a;
 	font-weight: bold;
 	letter-spacing: 1px;
 	bottom: 17px;
@@ -56,7 +59,7 @@
 
 	&:hover {
 		cursor: pointer;
-		color: #7e25ca;
+		color: $purple;
 	}
 }
 
@@ -81,7 +84,7 @@
 	button {
 		width: 100px;
 		height: 30px;
-		background-color: #7e25ca;
+		background-color: $blue;
 		color: white;
 		border-radius: 5px;
 		outline: none;
@@ -92,17 +95,17 @@
 
 		&:hover {
 			cursor: pointer;
-			background-color: #995ece;
+			background-color: lighten($blue, 15);
 		}
 	}
 
 	.fix-matched {
-		background-color: rgba(125, 37, 202, 0.2);
+		background-color: rgba(81, 99, 149, 0.3);
 		cursor: default;
 		margin-right: 20px;
 
 		&:hover {
-			background-color: rgba(125, 37, 202, 0.2);
+			background-color: rgba(81, 99, 149, 0.3);
 			cursor: default;
 		}
 	}
@@ -128,7 +131,7 @@
 }
 
 .file-saved {
-	color: #7e25ca;
+	color: $purple;
 	font-size: 13px;
 	text-align: center;
 	margin-right: 0px;
@@ -140,7 +143,7 @@
 }
 
 .file-updated {
-	color: #7e25ca;
+	color: $purple;
 	font-size: 13px;
 	text-align: center;
 	margin-right: 0px;

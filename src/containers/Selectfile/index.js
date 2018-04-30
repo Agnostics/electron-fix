@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./selectfile.scss";
-import { ipcRenderer as ipc, dialog } from "electron";
+import { ipcRenderer as ipc } from "electron";
 
 const outputTest = () => {
 	ipc.send("open-file-dialog");
@@ -33,7 +33,7 @@ class Selectfile extends Component {
 			<div id="dragarea" onDragOver={this.preventDefault} onDrop={this.drop}>
 				<div className="drag-area">
 					<div className="drag-items">
-						<i className="far fa-file-alt" />
+						<i className="fas fa-cloud-upload-alt" />
 						<div className="drag-title">Drop Fixes Here</div>
 						<small>- or -</small>
 						<button onClick={outputTest}>browse file</button>

@@ -6,7 +6,7 @@
 
 .drag-area {
 	height: 100%;
-	border: 5px dashed #cfcfcf;
+	border: 10px dashed #cfcfcf;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
@@ -28,40 +28,28 @@
 		padding: 12px 40px;
 		margin-top: 12px;
 		cursor: pointer;
-		transition: all 0.5s ease;
-		font-size: 22px;
-		letter-spacing: 8px;
+		font-size: 20px;
+		letter-spacing: 4px;
 		border-radius: 5px;
 
 		&:hover {
-			background: #7e25ca;
-		}
-
-		&:active {
-			background: #7e25ca;
-		}
-		&:focus {
-			outline: none;
-			border: none;
+			background: linear-gradient(to right, #516395, #614385);
 		}
 	}
-
 	.drag-title {
-		font-size: 40px;
+		font-size: 30px;
 		padding-bottom: 30px;
+		letter-spacing: 2px;
 	}
-
 	i {
-		font-size: 120px;
+		font-size: 90px;
 		padding-bottom: 20px;
 	}
-
 	small {
-		font-size: 40px;
+		font-size: 30px;
 		padding-bottom: 20px;
 	}
 }
-
 .fa-upload {
 	font-size: 2.8em;
 	padding-bottom: 10px;

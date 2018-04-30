@@ -17,9 +17,7 @@ const Titlebar = props => (
 				<i className="fas fa-angle-left" />
 				<span>back</span>
 			</div>
-		) : (
-			<div>null</div>
-		)}
+		) : null}
 
 		<div className="min" onClick={minWindow}>
 			_

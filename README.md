@@ -6,16 +6,16 @@ Easily search and replace text from a file and keep track of occurrences with ea
 
 #### Drag and drop formatted text files into program
 
-![capture1](https://user-images.githubusercontent.com/1341537/39404726-d99bd91a-4b66-11e8-85d5-cfe1f706732f.JPG)
+![capture1](https://user-images.githubusercontent.com/1341537/39443719-7815118e-4c83-11e8-9e9d-a6e2361a25dc.JPG)
 
 ---
 
 #### View info parsed from file and compares it with the html text.
 
-![capture2](https://user-images.githubusercontent.com/1341537/39404727-d9a48402-4b66-11e8-91d1-98dd7d70e7c5.JPG)
+![capture2](https://user-images.githubusercontent.com/1341537/39443720-781f4474-4c83-11e8-9751-414925cc973a.JPG)
 
 ---
 
 #### Error checking for quality of use.
 
-![capture3](https://user-images.githubusercontent.com/1341537/39404728-d9b5747e-4b66-11e8-88ee-75e0b2e7abef.JPG)
+![capture3](https://user-images.githubusercontent.com/1341537/39443721-782a6476-4c83-11e8-85ff-2571a597e825.JPG)

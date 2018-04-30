@@ -1,4 +1,3 @@
-// Import parts of electron to use
 const { app, BrowserWindow, ipcMain, dialog } = require("electron");
 const path = require("path");
 const url = require("url");
@@ -45,7 +44,6 @@ function createWindow() {
 
 	mainWindow.once("ready-to-show", () => {
 		mainWindow.show();
-
 		if (dev) {
 			mainWindow.webContents.openDevTools();
 		}

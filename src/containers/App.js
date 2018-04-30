@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-import { ipcRenderer as ipc, dialog } from "electron";
+import { ipcRenderer as ipc } from "electron";
 import "./global.scss";
-
-import fontawesome from "@fortawesome/fontawesome";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 
 import Titlebar from "../components/Titlebar";
 import Selectfile from "./Selectfile";
 import Outputfile from "./Outputfile";
 
-const fs = require("fs");
+import fs from "fs";
 
 class App extends Component {
 	constructor(props) {

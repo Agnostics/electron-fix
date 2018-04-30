@@ -18,30 +18,34 @@
 		"package": "webpack --config webpack.build.config.js ",
 		"postpackage": "electron-builder"
 	},
-
 	"build": {
 		"appId": "com.brandon.app",
 		"productName": "Electron Fixes",
 		"win": {
-			"target": ["nsis", "portable"]
+			"target": [
+				"nsis",
+				"portable"
+			]
 		},
 		"directories": {
 			"output": "builds"
 		},
 		"asar": false,
-		"files": ["package.json", "main.js", "dist/**/*"]
+		"files": [
+			"package.json",
+			"main.js",
+			"dist/**/*"
+		]
 	},
 	"devDependencies": {
-		"@fortawesome/fontawesome": "^1.1.5",
-		"@fortawesome/react-fontawesome": "0.0.18",
 		"babel-core": "^6.24.1",
 		"babel-loader": "^7.1.4",
 		"babel-preset-react": "^6.24.1",
 		"babili-webpack-plugin": "^0.1.2",
 		"css-loader": "^0.28.11",
 		"electron": "^1.8.4",
-		"electron-packager": "^9.1.0",
 		"electron-builder": "^20.10.0",
+		"electron-packager": "^9.1.0",
 		"extract-text-webpack-plugin": "^3.0.2",
 		"file-loader": "^1.1.11",
 		"highlight.js": "^9.12.0",
@@ -50,14 +54,13 @@
 		"react": "^16.3.1",
 		"react-animated-donut": "^0.4.0",
 		"react-dom": "^16.3.1",
+		"react-highlight.js": "^1.0.7",
 		"sass-loader": "^6.0.7",
 		"style-loader": "^0.19.1",
 		"svg-inline-loader": "^0.8.0",
 		"webpack": "^3.11.0",
 		"webpack-dev-server": "^2.11.2",
-		"font-awesome-webpack":
-			"git+https://github.com/jarecsni/font-awesome-webpack.git#440af2a2efe7ba1779d039556f04538e57bad4bb",
-		"react-highlight.js": "^1.0.7"
+		"xregexp": "^4.1.1"
 	},
 	"dependencies": {}
 }

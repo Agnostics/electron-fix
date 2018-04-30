@@ -1,5 +1,4 @@
 import React from "react";
-import { remote } from "electron";
 import "./item.scss";
 
 import Highlight from "react-highlight.js";
