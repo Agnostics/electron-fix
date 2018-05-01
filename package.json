@@ -1,7 +1,7 @@
 {
 	"name": "electron-fix",
 	"productName": "Electron Fix",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "Quickly search and replace HTML from text templates.",
 	"author": "Brandon Padilla",
 	"homepage": "https://github.com/agnostics/electron-fix",
@@ -22,20 +22,17 @@
 		"appId": "com.brandon.app",
 		"productName": "Electron Fixes",
 		"win": {
-			"target": [
-				"nsis",
-				"portable"
-			]
+			"target": ["nsis", "portable"]
+		},
+		"portable": {
+			"requestExecutionLevel": "user"
 		},
 		"directories": {
 			"output": "builds"
 		},
-		"asar": false,
-		"files": [
-			"package.json",
-			"main.js",
-			"dist/**/*"
-		]
+
+		"asar": true,
+		"files": ["package.json", "main.js", "dist/**/*", "icon.png"]
 	},
 	"devDependencies": {
 		"babel-core": "^6.24.1",
