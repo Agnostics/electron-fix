@@ -203,6 +203,11 @@ class Outputfile extends Component {
 			text = text.replace(search, replace);
 		});
 
+		if (/<\/span>/gi.test(text)) {
+			this.setState({ errorText: "A span was found, resolve the issue before proceeding" });
+			this.toggleError();
+		}
+
 		if (matchCount == 0)
 			this.setState({
 				showError: true,

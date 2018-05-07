@@ -1,7 +1,7 @@
 {
 	"name": "electron-fix",
 	"productName": "Electron Fix",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Quickly search and replace HTML from text templates.",
 	"author": "Brandon Padilla",
 	"homepage": "https://github.com/agnostics/electron-fix",
