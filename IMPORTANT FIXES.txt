@@ -1,0 +1,519 @@
+Export version: v1.32
+Export Trace: Clean
+TOC HEADER: YES
+Create by: Cathy
+
+
+INVAILD SEC CODING PLEASE CHECK IF IT IS IN THE CODING ALL THE TIME
+Search:
+</span>
+
+Occurrences: 
+-------------------------------------------------------------------
+Eliminating space below h3
+Search:
+<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: (.*?)px; margin-bottom: 0px; "><b>(.*?)</b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div>&nbsp;</p>
+			<div style="clear: both;"></div></div>
+			
+Replace:
+<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: $1px; margin-bottom: 0px; "><b>$2</b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; margin-bottom: -12px;"> </div></p>
+			<div style="clear: both;"></div></div>
+			
+Occurrences: 34
+--------------------------------------------------------------------
+Changing floating left and right column widths
+Search:
+<div class="block-main" style="float: left; width: 46%; margin-left: 0%; " >
+
+Replace:
+<div class="block-main" style="float: left; width: 48%; margin-left: 0%; " >
+
+Occurrences: 143
+--------------------------------------------------------------------
+Changing floating right column width
+Search:
+<div class="block-main" style="float: right; width: 46%; margin-left: 2%; " >
+
+Replace:
+<div class="block-main" style="float: right; width: 48%; margin-left: 2%; " >
+
+Occurrences: 143
+--------------------------------------------------------------------
+Changing toc column width
+Search:
+<td colspan="1" width="45%" 
+
+Replace:
+<td colspan="1" width="97%" 
+
+Occurrences: 49
+--------------------------------------------------------------------
+
+Eliminating color background color in table on shareholder letter page
+Search:
+<td width="29%" valign="middle" align="left" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: (.*?)px; text-align: left; margin-top: 0px; margin-bottom: 0px; background-color: #(.*?);
+
+Replace:
+<td width="29%" valign="middle" align="left" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: $1px; text-align: left; margin-top: 0px; margin-bottom: 0px;
+
+Occurrences: 2
+-------------------------------------------------------------------
+Eliminating color background color in table on shareholder letter page
+Search:
+<td width="70%" valign="middle" align="left" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: (.*?)px; text-align: left; margin-top: 0px; margin-bottom: 0px; background-color: #(.*?);
+
+Replace:
+<td width="70%" valign="middle" align="left" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: $1px; text-align: left; margin-top: 0px; margin-bottom: 0px; 
+
+Occurrences: 2
+-------------------------------------------------------------------
+Fixing the TOC 
+Search:
+<td colspan="1" width="97%" valign="top" align="left" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 16px; text-align: left; margin-top: 8.67px; margin-bottom: 0px; border-bottom: 1pt solid #000000; padding-bottom: pt; text-indent: 0px; padding-left: 0px; padding-right: 1.33px; margin-right: 0px;"><div class="group-p" style="padding-left: 0px; padding-right: 1.33px; "><a href
+
+Replace:
+<td colspan="1" width="97%" valign="top" align="left" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 16px; text-align: left; margin-top: 8.67px; margin-bottom: 0px; border-bottom: 1pt solid #000000; padding-bottom: pt; text-indent: 0px; padding-left: 0px; padding-right: 1.33px; margin-right: 0px;"><div class="group-p" style="padding-top: 12px; padding-left: 0px; padding-right: 1.33px; "><a style="color: #9a624e" href
+
+Occurrences: 23
+-------------------------------------------------------------------
+Fixing the TOC subheadings
+Search:
+<td colspan="1" width="97%" valign="top" align="left" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 12px; text-align: left; margin-top: 0px; margin-bottom: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 21.33px; padding-right: 1.33px; margin-right: 0px;"><div class="group-p" style="padding-left: 0px; padding-right: 1.33px; "><a href
+
+Replace:
+<td colspan="1" width="97%" valign="top" align="left" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 12px; text-align: left; margin-top: 0px; margin-bottom: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 21.33px; padding-right: 1.33px; margin-right: 0px;"><div class="group-p" style="padding-left: 0px; padding-right: 1.33px; "><a style="color: #000000" href
+
+Occurrences: 26
+-------------------------------------------------------------------
+Fix links on toc folio
+Search:
+<td width="0%" valign="bottom" align="right" xpp-righthang="" col="2" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 13.33px; text-align: right; margin-top: 8.67px; margin-bottom: 0px; border-bottom: 1pt solid #000000; padding-bottom: pt; text-indent: 0px; padding-left: 0px; padding-right: 0px; margin-right: 0px;"><div class="group-p" style=" whitespace: nowrap; "><a href
+
+Replace:
+<td width="0%" valign="bottom" align="right" xpp-righthang="" col="2" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 13.33px; text-align: right; margin-top: 8.67px; margin-bottom: 0px; border-bottom: 1pt solid #000000; padding-bottom: pt; text-indent: 0px; padding-left: 0px; padding-right: 0px; margin-right: 0px;"><div class="group-p" style=" whitespace: nowrap; "><a style="color: #9a624e" href
+
+Occurrences: 22
+-------------------------------------------------------------------
+Fix links on toc folio
+Search:
+<td width="0%" valign="bottom" align="right" xpp-righthang="" col="2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 12px; text-align: right; margin-top: 0px; margin-bottom: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 0px; padding-right: 0px; margin-right: 0px;"><div class="group-p" style=" whitespace: nowrap; "><a href
+
+Replace:
+<td width="0%" valign="bottom" align="right" xpp-righthang="" col="2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 12px; text-align: right; margin-top: 0px; margin-bottom: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 0px; padding-right: 0px; margin-right: 0px;"><div class="group-p" style=" whitespace: nowrap; "><a style="color: #000000" href
+
+Occurrences: 26
+-------------------------------------------------------------------
+Changing stub column width on toc
+Search:
+<td colspan="1" width="97%"
+
+Replace:
+<td colspan="1" width="90%"
+
+Occurrences: 49
+-------------------------------------------------------------------
+Adjusting space above Dear Shareholder
+Search:
+<p class="unknown" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 17.37px; padding-left:  0px; text-indent: 0px; text-align: center; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; "><img src="logo_coachv2.jpg" alt="" style="height: 43.87px; width: 201.60px; scale: ">&#8201;</p>
+
+Replace:
+<p class="unknown" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 17.37px; padding-left:  0px; text-indent: 0px; text-align: center; margin-right: 0px; margin-top: 0px; padding-bottom: 24px; "><img src="logo_coachv2.jpg" alt="" style="height: 43.87px; width: 201.60px; scale: ">&#8201;</p>
+
+Occurrences: 1
+-------------------------------------------------------------------
+Changing leading below h1
+Search:
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 24px; line-height: 8px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 32px; margin-bottom: 0px; "><a n
+
+Replace:
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 24px; line-height: 8px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 32px; margin-bottom: 24px; "><a style="color: #9a624e" n
+
+Occurrences: 1
+-------------------------------------------------------------------
+Right side of toc drop down 9 px
+Search:
+<table align="center" width="100%" style="margin-top: 4px; margin-left: 0px; border-collapse: collapse; ">
+									<tr>
+	<td colspan="1" width="90%" valign="top" align="left" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 16px; text-align: left; margin-top: 8.67px; margin-bottom: 0px; border-bottom: 1pt solid #000000; padding-bottom: pt; text-indent: 0px; padding-left: 0px; padding-right: 1.33px; margin-right: 0px;"><div class="group-p" style="padding-top: 12px; padding-left: 0px; padding-right: 1.33px; "><a style="color: #9a624e" href="#pCRA">
+
+Replace:
+<table align="center" width="100%" style="margin-top: 4px; margin-left: 0px; border-collapse: collapse; ">
+									<tr>
+	<td colspan="1" width="90%" valign="top" align="left" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 16px; text-align: left; margin-top: 8.67px; margin-bottom: 0px; padding-top: 51px; border-bottom: 1pt solid #000000; padding-bottom: pt; text-indent: 0px; padding-left: 0px; padding-right: 1.33px; margin-right: 0px;"><div class="group-p" style="padding-top: 12px; padding-left: 0px; padding-right: 1.33px; "><a style="color: #9a624e" href="#pCRA">
+
+Occurrences: 1
+-------------------------------------------------------------------
+Adjusted space below h1
+Search:
+<p class="h1" style="color: #(.*?); font-family: Times New Roman, Times, Serif; font-size: (.*?)px; line-height: (.*?)px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; "><a n
+
+Replace: 
+<p class="h1" style="color: #9a624e; font-family: Times New Roman, Times, Serif; font-size: $2px; line-height: $3px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 24px; "><a style="color: #9a624e" n
+
+Occurrences: 3
+-------------------------------------------------------------------
+Box folios
+Search:
+<div style="clear: both;"></div></div>
+
+
+
+
+
+<div class="block-frill" style="width: 100%; margin-left: 0%; margin-top: 16px;">
+				<p class="unknown" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; padding-left:  0px; text-indent: 0px; text-align: right; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; ">(.*?)</p>
+			</div>
+
+<div class="block-frill" style="width: 100%; margin-left: 0%; margin-top: 16px;">
+				<p class="unknown" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; "><img src="coachtemplate_foliologoxsb2.jpg" alt="" style="height: 6.67px; width: 80px; scale: ">2017 PROXY STATEMENT<br /></p>
+			</div>
+
+Replace:
+<div style="clear: both;"></div></div>
+
+
+
+
+
+<table align="center" width="98%" style="margin-top: 18px; border-collapse: collapse; ">
+									<tr>
+	<td colspan="1" width="90%"valign="top" align="left" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 9.33px; text-align: left; margin-top: 8.67px; margin-bottom: 0px; padding-top: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 0px; margin-right: 0px;"><img src="coachtemplate_foliologoxsb2.jpg" alt="" style="height: 6.67px; width: 80px; scale: ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017 PROXY STATEMENT</td>
+	<td width="8%"valign="top" align="right" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 9.33px; text-align: right; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 0px; margin-right: 0px;">$1</td>
+	</tr>
+	</table>
+	
+Occurrences: 1
+-------------------------------------------------------------------
+Fixes on folio 7 to extend the rule
+Search:
+<table class="group-list" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 8px; padding-top: 0px; padding-bottom: 0px; "><tr style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top;"><td class="group-filler" width="0px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; "> </td><td class="group-list" width="40px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; text-align: left; "><b>(.*?)</b></td><td class="group-item" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; text-align: left; "><b><font style="color: #000000;">(.*?)</font></b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div><br /><br /></td></tr></table>
+
+Replace:
+<table class="group-list" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 8px; padding-top: 0px; padding-bottom: 0px; "><tr style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top;"><td class="group-filler" width="0px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; "> </td><td class="group-list" width="40px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; text-align: left; "><b>$1</b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "></td><td class="group-item" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; text-align: left; "><b><font style="color: #000000;">$2</font></b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div></td></tr></table>
+
+Occurrences: 18
+-------------------------------------------------------------------
+Adding space below h1
+Search:
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: (.*?)px; line-height: (.*?)px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: (.*?)px; margin-bottom: 0px; ">
+
+Replace:
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: $1px; line-height: $2px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: $3px; margin-bottom: 24px; ">
+
+Occurrences: 20
+-------------------------------------------------------------------
+Additional changes to the numbered heads folio 10
+Search:
+<table class="group-list" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 8px; padding-top: 0px; padding-bottom: 0px; "><tr style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top;"><td class="group-filler" width="0px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; "> </td><td class="group-list" width="40px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; text-align: left; "><b>(.*?)</b></td><td class="group-item" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; text-align: justify; "><b><font style="color: #000000;">(.*?)</font></b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div><br /><br /></td></tr></table>
+
+Replace:
+<table class="group-list" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 8px; padding-top: 0px; padding-bottom: 0px; "><tr style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top;"><td class="group-filler" width="0px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; "> </td><td class="group-list" width="40px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; text-align: left; "><b>$1</b><br />&nbsp;<div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div></td><td class="group-item" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; text-align: justify; "><b><font style="color: #000000;">$2</font></b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div></td></tr></table>
+
+Occurrences: 3
+-------------------------------------------------------------------
+Additional changes to the numbered
+<table class="group-list" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 8px; padding-top: 0px; padding-bottom: 0px; "><tr style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top;"><td class="group-filler" width="0px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; "> </td><td class="group-list" width="40px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; text-align: left; "><b>14.</b><br />&nbsp;
+
+Replace:
+<table class="group-list" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 8px; padding-top: 0px; padding-bottom: 0px; "><tr style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top;"><td class="group-filler" width="0px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; "> </td><td class="group-list" width="40px" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 18.67px; vertical-align: top; text-align: left; "><b>14.</b>
+
+Occurrences: 1
+-------------------------------------------------------------------
+h2 spacing below to 2 column heads
+Search:
+<div class="block-main" style="width: 100%; margin-left: 0%; " >
+				<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; "><a name="(.*?)"></a><b>(.*?)</b></p>
+			<div style="clear: both;"></div></div>
+			
+Replace:
+<div class="block-main" style="width: 100%; margin-left: 0%; " >
+				<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 24px; margin-bottom: 12px; "><a name="$1"></a><b>$2</b></p>
+			<div style="clear: both;"></div></div>
+
+Occurrences: 11
+-------------------------------------------------------------------
+h1 spacing to h2 spacing to be fixed
+Search:
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 29.33px; line-height: 16px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 24px; "><b>(.*?)</b></p>
+				<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; ">
+				
+Replace:
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 29.33px; line-height: 16px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 36px; "><b>$1</b></p>
+				<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 30px; ">
+				
+Occurrences:2
+-------------------------------------------------------------------				
+Folio 15 spacing around heads
+Search:
+<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; "><a name="(.*?)"></a><b>(.*?)</b></p>
+				<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: -4px; margin-bottom: 0px; "><b>(.*?)</b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; margin-bottom: -12px;"> </div></p>
+				
+Replace:
+<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 24px; margin-bottom: 24px; "><a name="$1"></a><b>$2</b></p>
+				<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: -4px; margin-bottom: 0px; "><b>$3</b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; margin-bottom: -12px;"> </div></p>
+				
+Occurrences:7
+-------------------------------------------------------------------
+Folio 12 -- fix spacing above h3
+Search:
+<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: -8px; margin-bottom: 0px; "><b>(.*?)</b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div>&nbsp;</p>
+
+Replace:
+<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 24px; margin-bottom: 0px; "><b>$1</b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div></p>
+				
+Occurrences:1
+-------------------------------------------------------------------
+Fix margin left margin-left: 0%;
+Search:
+<table align="center" width="40%" style="margin-top: 4px; margin-left: 0%; border-collapse: collapse; ">
+
+Replace:
+<table align="center" width="40%" style="margin-top: 4px; border-collapse: collapse; ">
+
+Occurrences:1
+-------------------------------------------------------------------
+Folio 17 -- spacing footnote to h3
+Search:
+</div><div style="clear: both"></div>
+
+<div class="block-main" style="width: 100%; margin-left: 0%; " >
+				<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: -8px; margin-bottom: 0px; ">
+				
+Research:
+</div><div style="clear: both"></div>
+
+<div class="block-main" style="width: 100%; margin-left: 0%; " >
+				<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 24px; margin-bottom: 0px; ">
+				
+Occurrences:1
+-------------------------------------------------------------------
+Changing spacing below h3
+Search:
+<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10.67px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 20px; margin-bottom: 0px; "><b>(.*?)</b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div>&nbsp;</p>
+
+Replace:
+<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10.67px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 20px; margin-bottom: 0px; "><b>$1</b><div class="hr-full" style="height: 2.67px; border-bottom: 1pt solid #8F4E41; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2.67px; margin-top: 1px; "> </div></p>
+
+Occurrences:3
+-------------------------------------------------------------------
+Folio 19 -- spacing below h1
+Search:
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 29.33px; line-height: 16px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 24px; "><b>(.*?)</b></p>
+				<p class="fpara" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 13.33px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: -12px; 
+
+Replace:				
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 29.33px; line-height: 16px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 24px; "><b>$1</b></p>
+				<p class="fpara" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 13.33px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 30px; 
+				
+Occurrences:2
+-------------------------------------------------------------------
+Folio 23 box fixes
+Search:
+<p class="fpara" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 14px; line-height: 16.67px; padding-left:  8px; text-indent: 0px; text-align: justify; border: 1px solid #FFFFFF; padding-top: 10.67px; padding-bottom: 10.67px; margin-right: 0px; margin-top: 12px; margin-bottom: 0px; ">
+
+Replace:
+<p class="fpara" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 14px; line-height: 16.67px; padding-left:  8px; text-indent: 0px; text-align: justify; border: 1px solid #9a624e; background-color: #ede4e0; padding-top: 6px; padding-bottom: 6px; padding-left: 6px; padding-right: 6px; margin-right: 0px; margin-top: 12px; margin-bottom: 0px; ">
+				
+Occurrences:2
+-------------------------------------------------------------------				
+Starting on folio 24
+Search:
+</div>&nbsp;</p>
+
+Research:
+</div></p>
+
+Occurrences:18
+-------------------------------------------------------------------				
+Folio 27 spacing below head
+Search:
+<p class="fpara" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 13.33px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: -12px; margin-bottom: 0px; ">
+
+Replace:
+<p class="fpara" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 13.33px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 12px; margin-bottom: 0px; ">
+
+Occurrences: 6
+-------------------------------------------------------------------				
+Making h1 space below wider
+Search:
+margin-right: 0px; margin-top: 16px; margin-bottom: 24px; ">
+
+Replace:
+margin-right: 0px; margin-top: 16px; margin-bottom: 30px; ">
+
+Occurrences: 21
+-------------------------------------------------------------------
+Folio 33 -- spacing between heads
+Search:
+<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; "><a name="(.*?)"></a><b>(.*?)</b></p>
+				<p class="h3" 
+				
+Research:
+<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 24px; "><a name="$1"></a><b>$2</b></p>
+				<p class="h3"
+				
+Occurrences: 1
+-------------------------------------------------------------------
+checkmark to table
+Search:
+<p class="fpara" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 13.33px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 8px; margin-bottom: 0px; "><img src="coachtemplate_check.jpg" alt="" style="height: 8.67px; width: 9.33px; scale: ">&#8201;<br />(.*?)</p>				
+
+Replace:
+<table class="group-list" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 8px; padding-top: 0px; padding-bottom: 0px; ">
+<tr style="font-family: Times New Roman, Times, Serif; font-size: 13.33px; vertical-align: top;">
+<td class="group-list" width="5%" style="font-family: Times New Roman, Times, Serif; font-size: 13.33px; vertical-align: top; text-align: left; "><img src="coachtemplate_check.jpg" alt="" style="height: 8.67px; width: 9.33px; scale: "></td>
+<td class="group-item" width="95%" style="font-family: Times New Roman, Times, Serif; font-size: 13.33px; text-align: justify; "><font style="color: #000000;">$1</font></td></tr></table>				
+
+Occurrences: 9
+-------------------------------------------------------------------				
+changing black table head rules to white
+Search:
+border-bottom: 1pt solid black;
+
+Replace:
+border-bottom: 1pt solid #FFFFFF;
+
+Occurrences: 26
+-------------------------------------------------------------------
+Fixing space below head on folio 
+Search:
+<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; "><a name="p(.*?)"></a><b>(.*?)</b></p>
+				<p class="h4" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 16px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; ">
+
+Replace:
+<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; "><a name="p$1"></a><b>$2</b></p>
+				<p class="h4" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 16px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 36px; margin-bottom: 0px; ">
+
+Occurrences: 1
+-------------------------------------------------------------------
+Remove background blackline on folio 45
+Search:
+background-color: #000000;
+
+Replace:
+
+
+
+Occurrences: 22
+-------------------------------------------------------------------
+Folio 45 removing blue shading from table on 45
+Search:
+<tr style="background-color: #cceeff;">
+	<td colspan="1" width="24%" 
+	
+Replace:
+<tr">
+	<td colspan="1" width="24%" 
+	
+Occurrences: 8
+-------------------------------------------------------------------
+Folio 53 -- head spacing fix
+Search:
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 29.33px; line-height: 16.67px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 30px; "><b>EXECUTIVE COMPENSATION</b></p>
+				<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10.67px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; "><a name="pEC"></a><a name="pCT"></a><b>
+				
+Replace:
+<p class="h1" style="color: #8f4e41; font-family: Times New Roman, Times, Serif; font-size: 29.33px; line-height: 16.67px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 50px; "><b>EXECUTIVE COMPENSATION</b></p>
+				<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10.67px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 18px; "><a name="pEC"></a><a name="pCT"></a><b>
+				
+Occurrences: 1
+-------------------------------------------------------------------
+Eliminating blue shading on folio 57
+Search:
+<tr style="background-color: #cceeff;">
+
+Replace:
+<tr>
+
+Occurrences: 226
+-------------------------------------------------------------------
+Folio 61 -- space above table to header
+Search:
+<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 0px; "><a name="p(.*?)"></a><b>(.*?)</b></p>
+				<table align="center" 
+				
+Replace:
+<p class="h2" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 23.33px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 16px; margin-bottom: 18px; "><a name="p$1"></a><b>$2</b></p>
+				<table align="center" 
+				
+Occurrences: 2
+-------------------------------------------------------------------
+Folio 88 adjust spacing for the head
+Search:
+</b></p>
+				<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: -4px; margin-bottom: 0px; "><b>Article 1.
+				
+Replace:
+</b></p>
+				<p class="h3" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 18.67px; line-height: 10px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 24px; margin-bottom: 0px; "><b>Article 1.
+				
+Occurrences: 1
+-------------------------------------------------------------------				
+Signature on 114
+Search:
+<br /><div class="hr-partial" style="height: 2.67px; border-bottom: 0.5pt solid #000000; width: 23%; margin-left: 0%; margin-bottom: 2.67px; margin-top: 9px; "> </div></p><p class="fpara" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 13.33px; padding-left:  170.67px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; ">
+
+Replace:
+<br /><div class="hr-partial" style="height: 2.67px; border-bottom: 0.5pt solid #000000; margin-left: 170.67px; margin-bottom: 2.67px; margin-top: 7px; "> </div></p><p class="fpara" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 13.33px;  text-indent: 0px; text-align: left; margin-left: 170.67px; margin-top: -12px; margin-bottom: 0px; ">
+
+Occurrences: 1
+-------------------------------------------------------------------
+Color changes (light):
+Search:
+#f2eae9; 
+
+Replace:
+#ede4e0;
+
+Occurrences: 4594
+-------------------------------------------------------------------
+Color changes (dark):
+Search:
+#ae7d74;
+
+Replace:
+#9a624e;
+
+Occurrences: 309
+-------------------------------------------------------------------
+Fix right folios:
+Search:
+<div class="block-frill" style="width: 100%; margin-left: 0%; margin-top: 16px;">
+				<p class="unknown" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; padding-left:  0px; text-indent: 0px; text-align: right; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; ">(.*?)</p>
+			</div>
+
+<div class="block-frill" style="width: 100%; margin-left: 0%; margin-top: 16px;">
+				<p class="unknown" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; "><img src="coachtemplate_foliologoxsb2.jpg" alt="" style="height: 6.67px; width: 80px; scale: ">2017 PROXY STATEMENT<br /></p>
+			</div>
+
+Replace:
+<table align="center" width="100%" style="margin-top: 18px; border-collapse: collapse; ">
+									<tr>
+	<td colspan="1" width="90%"valign="top" align="left" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; text-align: left; margin-top: 8.67px; margin-bottom: 0px; padding-top: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 0px; margin-right: 0px;"><img src="coachtemplate_foliologoxsb2.jpg" alt="" style="height: 6.67px; width: 80px; scale: ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017 PROXY STATEMENT</td>
+	<td width="10%"valign="top" align="right" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; text-align: right; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 0px; margin-right: 0px;">$1</td>
+	</tr>
+	</table>
+	
+Occurrences: 56
+-------------------------------------------------------------------
+Fix left folios:
+Search:
+<div class="block-frill" style="width: 100%; margin-left: 0%; margin-top: 16px;">
+				<p class="unknown" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; padding-left:  0px; text-indent: 0px; text-align: left; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; ">(.*?)</p>
+			</div>
+
+<div class="block-frill" style="width: 100%; margin-left: 0%; margin-top: 16px;">
+				<p class="unknown" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; padding-left:  0px; text-indent: 0px; text-align: right; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; "><img src="coachtemplate_foliologoxsb2.jpg" alt="" style="height: 6.67px; width: 80px; scale: ">2017 PROXY STATEMENT<br /></p>
+			</div>
+
+Replace:
+<table align="center" width="100%" style="margin-top: 18px; border-collapse: collapse; ">
+									<tr>
+	<td width="10%"valign="top" align="left" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; text-align: left; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 0px; margin-right: 0px;">$1</td>
+	<td colspan="1" width="90%"valign="top" align="left" style="color: #000000; font-family: Times New Roman, Times, Serif; font-size: 9.33px; text-align: right; margin-top: 8.67px; margin-bottom: 0px; padding-top: 0px; padding-bottom: pt; text-indent: 0px; padding-left: 0px; margin-right: 0px;"><img src="coachtemplate_foliologoxsb2.jpg" alt="" style="height: 6.67px; width: 80px; scale: ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017 PROXY STATEMENT</td>
+	
+	</tr>
+	</table>
+	
+Occurrences: 57
+-------------------------------------------------------------------
