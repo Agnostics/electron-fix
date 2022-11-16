@@ -46,7 +46,7 @@
 		"extract-text-webpack-plugin": "^3.0.2",
 		"file-loader": "^1.1.11",
 		"highlight.js": "^9.12.0",
-		"html-webpack-plugin": "^2.30.1",
+		"html-webpack-plugin": "^5.5.0",
 		"node-sass": "^4.8.3",
 		"react": "^16.3.1",
 		"react-animated-donut": "^0.4.0",
@@ -54,7 +54,7 @@
 		"react-highlight.js": "^1.0.7",
 		"sass-loader": "^6.0.7",
 		"style-loader": "^0.19.1",
-		"svg-inline-loader": "^0.8.0",
+		"svg-inline-loader": "^0.8.2",
 		"webpack": "^3.11.0",
 		"webpack-dev-server": "^2.11.2",
 		"xregexp": "^4.1.1"
